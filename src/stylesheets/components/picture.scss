@@ -1,7 +1,11 @@
 @import '../base/colors.scss';
 
+$picture-width : 300px;
+$picture-height : $picture-width / (16/9);
+
 .Picture {
-	width: 300px;
-	height: 150px;
-	background-color: $primary-color-darker;
+	width: $picture-width;
+	height: $picture-height;
+	background-color: #555;
+	padding: 1em;
 }

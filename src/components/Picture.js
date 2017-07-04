@@ -6,7 +6,7 @@ class Picture extends Component {
 	render() {
 		return (
 			<div className="Picture">
-				<h3>Film</h3>
+				<h3>Film title</h3>
 			</div>
 		)
 	}
