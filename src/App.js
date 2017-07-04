@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomeUser from './components/HomeUser/HomeUser';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <p>Netflex power</p>
-      </div>
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={HomeUser} />
+        </div>
+      </Router>
     );
   }
 }
