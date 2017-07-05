@@ -8,4 +8,60 @@ $picture-height : $picture-width / (16/9);
 	height: $picture-height;
 	background-color: #555;
 	padding: 1em;
+	margin: 0 1em;
+	display: flex;
+	flex-direction: column;
+
+	.play-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		transition: 0.3s ease-out;
+
+		.-content {
+			opacity: 0.5;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			width: 3em;
+			height: 3em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $transparent-black;
+			color: $primary-color;
+			transition: 0.1s ease-out;
+
+			.-icon {
+				position: relative;
+				left: 0.09em;
+				font-size: 2em;
+			}
+		}
+
+		&:hover {
+			.-content {
+				opacity: 1;
+				color: $secondary-color;
+			}
+		}
+	}
+
+	.details-container {
+		position: relative;
+		.-arrow {
+			color: $primary-color;
+			font-size: 2em;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:hover {
+			.-arrow {
+				color: $secondary-color;
+			}
+		}
+	}
 }
