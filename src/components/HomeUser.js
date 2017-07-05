@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Picture from './Picture';
+// import Picture from './Picture';
 import Header from './Header';
+import PictureList from './PictureList';
 
 class HomeUser extends Component {
 	constructor(props) {
@@ -15,10 +16,7 @@ class HomeUser extends Component {
 			<div className="HomeUser">
 				<Header />
 				<div className="-container">
-					<Picture />
-					<Picture />
-					<Picture />
-					<Picture />
+					<PictureList title="My list" />
 				</div>
 			</div>
 		)

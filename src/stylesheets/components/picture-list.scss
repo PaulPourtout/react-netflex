@@ -1,0 +1,36 @@
+@import './picture.scss';
+
+.PictureList {
+		width: 100%;
+		// overflow: visible;
+		h3 {
+			margin: 1em;
+		}
+	.list-container {
+		height: $picture-height;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		padding: 0 2.2em;
+
+		button {
+			color: $primary-color;
+			position: absolute;
+			z-index: 1000;
+			height: 100%;
+
+			&:first-of-type {
+				left: 0;
+				background: linear-gradient(to right, rgba(0,0,0,0.4), transparent);
+			}
+			&:last-of-type {
+				right: 0;
+				background: linear-gradient(to right, transparent, rgba(0,0,0,0.4));
+			}
+
+			.icon {
+				font-size: 2em;
+			}
+		}
+	}
+}

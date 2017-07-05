@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import LikeList from './LikeList';
 
 
 class Picture extends Component {
@@ -13,11 +13,12 @@ class Picture extends Component {
 					</span>
 				</div>
 				<div className="details-container">
-					<h3>Film title</h3>
+					<h3>{this.props.title}</h3>
 					<span className="-arrow">
 						<i className="fa fa-angle-down"></i>
 					</span>
 				</div>
+				<LikeList />
 			</div>
 		)
 	}

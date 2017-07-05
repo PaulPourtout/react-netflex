@@ -1,0 +1,26 @@
+
+
+.LikeList {
+	.icon-container {
+		margin: 0.3em 0;
+		border-radius: 50%;
+		border: 1px solid $primary-color-darker;
+		height: 1.4em;
+		width: 1.4em;
+		display: flex;
+		background-color: $transparent-black;
+		justify-content: center;
+		align-items: center;
+		transform: scale(1);
+		transition: 0.2s ease-out;
+
+		&:hover {
+			transform: scale(1.2);
+			border-color: $primary-color;
+		}
+		.-icon {
+			color: $primary-color-darker;
+			font-size: 0.7em;
+		}
+	}
+}
