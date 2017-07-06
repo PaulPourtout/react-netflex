@@ -19,11 +19,14 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 .Picture {
 	width: $picture-width;
 	height: $picture-height;
-	background-color: #555; // TODO : Replace by film cover
+	background-size: cover;
+	background-position: center;
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	transition: 0.3s ease-out;
+	transition-delay: 0.2s;
+	margin: 0 0.5em;
 	
 	&:hover {
 		transform: translateY(-20%);
@@ -31,6 +34,7 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 		height: $picture-height * 1.75;
 		.play-container, .details-container, .LikeList {
 			opacity: 1;
+			transition-delay: 0.5s;
 		}
 		.details-container {
 			background: linear-gradient(to top, $transparent-black, transparent);
@@ -41,9 +45,10 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 		@include flex-center;
 		flex: 1;
 		transition: 0.3s ease-out;
+		
 
 		.-content {
-			opacity: 0.5;
+			opacity: 0.3;
 			border-radius: 50%;
 			border: 3px solid #fff;
 			width: 3em;
@@ -74,9 +79,17 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 		background: linear-gradient(to top, transparent, transparent);
 		transition: 0.3s ease-out;
 		padding: 1em;
+
+		h3 {
+			margin: 1em 0;
+			color: $primary-color;
+			text-align: left;
+			font-size: 1.5em;
+		}
+
 		.-arrow {
 			color: $primary-color;
-			font-size: 2em;
+			font-size: 3em;
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -97,4 +110,23 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 		right: 5%;
 		transition: 0.3s ease-out;
 	}
+}
+
+
+.pictureTransition-enter {
+	 opacity: 0.01;
+}
+
+.pictureTransition-enter.pictureTransition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.pictureTransition-leave {
+  opacity: 1;
+}
+
+.pictureTransition-leave.pictureTransition-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
