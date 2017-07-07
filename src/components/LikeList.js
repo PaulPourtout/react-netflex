@@ -3,19 +3,19 @@ import React from 'react';
 const LikeList = () => (
 	<ul className="LikeList">
 		<li>
-			<span className="icon-container">
+			<button className="icon-container">
 				<i className="fa fa-thumbs-o-up -icon"></i>
-			</span>
+			</button>
 		</li>
 		<li>
-			<span className="icon-container">
+			<button className="icon-container">
 				<i className="fa fa-thumbs-o-down -icon"></i>
-			</span>
+			</button>
 		</li>
 		<li>
-			<span className="icon-container">
+			<button className="icon-container">
 				<i className="fa fa-plus -icon"></i>
-			</span>
+			</button>
 		</li>
 	</ul>
 );

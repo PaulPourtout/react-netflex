@@ -1,19 +1,9 @@
-@import '../base/colors.scss';
+@import '../base/_all.scss';
 
-$picture-width : 210px;
+
+$picture-width : 15em;
 $picture-height : $picture-width / (16/9);
 $height-shift : (($picture-height * 1.5) / 4) * -1;
-
-@mixin transition-03 () {
-	transition: 0.3s ease-out;
-
-}
-
-@mixin flex-center () {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 
 .Picture {
@@ -26,12 +16,14 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 	position: relative;
 	transition: 0.3s ease-out;
 	transition-delay: 0.2s;
-	margin: 0 0.5em;
+	margin: 0 0.1em;
+	z-index: 50;
 	
 	&:hover {
 		transform: translateY(-20%);
 		width: $picture-width * 1.75;
 		height: $picture-height * 1.75;
+
 		.play-container, .details-container, .LikeList {
 			opacity: 1;
 			transition-delay: 0.5s;
@@ -113,20 +105,3 @@ $height-shift : (($picture-height * 1.5) / 4) * -1;
 }
 
 
-.pictureTransition-enter {
-	 opacity: 0.01;
-}
-
-.pictureTransition-enter.pictureTransition-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.pictureTransition-leave {
-  opacity: 1;
-}
-
-.pictureTransition-leave.pictureTransition-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}

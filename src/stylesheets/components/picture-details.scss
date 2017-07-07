@@ -1,0 +1,98 @@
+@import './../base/_all.scss';
+
+.PictureDetails {
+	width: 100wh;
+	height: 60vh;
+	max-height: 0;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	animation: heightAnimation 1s ease-out forwards; 
+	// animation-delay: 2s;
+
+	.close-btn {
+		position: absolute;
+		top: 0.3em;
+		right: 0.3em;
+		height: 1em;
+		width: 1em;
+		font-size: 2em;
+		@include flex-center;
+
+		.stroke {
+			width: 3px;
+    	height: 0.7em;
+			display: inline;
+			position: absolute;
+			background-color: $primary-color;
+
+			&:first-of-type {
+				transform: rotateZ(45deg);
+			}
+
+			&:last-of-type {
+				transform: rotateZ(-45deg);
+			}
+		}
+
+	}
+
+	.details-container {
+		width: 30%;
+		padding: 2em;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			color : $primary-color-darker;
+			line-height: 1.5em;
+
+			&:first-of-type {
+				margin: 1em 0;
+			}
+		}
+	}
+
+	.movie-link {
+		@include flex-center;
+		flex: 1;
+		height: 100%;
+
+		.icon-container {
+			border: 0.11em solid $primary-color;
+			border-radius: 50%;
+			height: 2em;
+			width: 2em;
+			font-size: 3em;
+			background-color: transparent;
+			@include flex-center;
+			color: $primary-color;
+			@include transition-03;
+	
+			&:hover {
+				transform: scale(1.1);
+				background-color: $transparent-black;
+				color: $secondary-color;
+			}
+
+			.-icon {
+				position: relative;
+				left: 0.1em;
+			}
+		}
+	}
+}
+
+@keyframes heightAnimation {
+	from {
+		max-height: 0;
+	}
+
+	to {
+		max-height: 60vh;
+	}
+}

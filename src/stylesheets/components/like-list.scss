@@ -5,8 +5,8 @@
 		margin: 0.3em 0;
 		border-radius: 50%;
 		border: 1px solid $primary-color-darker;
-		height: 1.4em;
-		width: 1.4em;
+		height: 2.2em;
+		width: 2.2em;
 		display: flex;
 		background-color: $transparent-black;
 		justify-content: center;
@@ -20,7 +20,7 @@
 		}
 		.-icon {
 			color: $primary-color-darker;
-			font-size: 0.7em;
+			font-size: 1em;
 		}
 	}
 }

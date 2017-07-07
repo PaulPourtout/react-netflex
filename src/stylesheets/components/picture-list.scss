@@ -2,10 +2,10 @@
 
 .PictureList {
 		width: 100%;
-		margin: 4em 0;
+		margin: 2.5em 0;
 		// overflow: visible;
-		h2 {
-			margin: 0.5em 1em;
+		.list-title {
+			margin: 0.5em 2.2em;
 			font-size: 1.2em;
 		}
 	.list-container {
@@ -35,4 +35,27 @@
 			}
 		}
 	}
+
+	.PictureDetails {
+		margin-top: 0.3em;
+	}
+
+}
+
+.pictureTransition-enter {
+	 transform: scale(0.01);
+}
+
+.pictureTransition-enter.pictureTransition-enter-active {
+  transform: scale(1);
+  transition: 500ms ease-in;
+}
+
+.pictureTransition-leave {
+ transform: scale(1);
+}
+
+.pictureTransition-leave.pictureTransition-leave-active {
+  transform: scale(0.01);
+  transition: 300ms ease-in;
 }
